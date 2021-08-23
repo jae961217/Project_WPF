@@ -1,0 +1,78 @@
+﻿<Page x:Class="wpfProject.Search"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wpfProject"
+      mc:Ignorable="d" 
+      Height="400" Width="600"
+      Title="Search">
+
+    <Grid Background="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="region" Grid.Row="0" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="50" Click="toRegion">
+            <Image Source="image/region.png" Height="50" Width="50" RenderTransformOrigin="0.5,0.508"></Image>
+        </Button>
+        <Button x:Name="graph" Grid.Row="0" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="265,0,0,0" VerticalAlignment="Top" Width="50" Click="toGraph">
+            <Image Source="image/graph.png" Height="50" Width="50"></Image>
+        </Button>
+        <Button x:Name="dodsee" Grid.Row="0" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="535,0,0,0" VerticalAlignment="Top" Width="50">
+            <Image Source="image/dodsee.png" Height="50" Width="50"></Image>
+        </Button>
+        <Border Grid.Row="0" Background="Black" BorderBrush="Black" BorderThickness="0.01" HorizontalAlignment="Left" Height="9" Margin="0,50,0,0" VerticalAlignment="Top" Width="587"/>
+        <Border Grid.Row="2" Background="Black" BorderBrush="Black" BorderThickness="0.01" HorizontalAlignment="Left" Height="9" Margin="0,0,0,0" VerticalAlignment="Top" Width="587"/>
+        <Button x:Name="back"  Click="toHome" Grid.Row="2" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="0,8,0,0" VerticalAlignment="Top" Width="50" >
+            <Image Source="image/home.png" Height="50" Width="50"></Image>
+        </Button>
+        <Button x:Name="exit" Click="progExit" Grid.Row="2" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="265,8,0,0" VerticalAlignment="Top" Width="50" >
+            <Image Source="image/exit.png" Height="50" Width="50"></Image>
+        </Button>
+        <Label Grid.Row="1" Content="검색" HorizontalAlignment="Left" Margin="210,20,0,0" VerticalAlignment="Top" Height="44" Width="155"/>
+        <Label Grid.Row="1" Content="지역" HorizontalAlignment="Left" Margin="39,60,0,0" VerticalAlignment="Top" Height="30" Width="107"/>
+        <ComboBox Name="provCombo" Grid.Row="1" HorizontalAlignment="Left" Margin="39,95,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="getProvince" >
+            <ComboBoxItem Content="경기도"/>
+            <ComboBoxItem Content="강원도"/>
+            <ComboBoxItem Content="충청남도"/>
+            <ComboBoxItem Content="충청북도"/>
+            <ComboBoxItem Content="경상남도"/>
+            <ComboBoxItem Content="경상북도"/>
+            <ComboBoxItem Content="전라남도"/>
+            <ComboBoxItem Content="전라북도"/>
+            <ComboBoxItem Content="제주특별자치도"/>
+            <ComboBoxItem Content="서울특별시"/>
+            <ComboBoxItem Content="인천광역시"/>
+            <ComboBoxItem Content="세종특별자치시"/>
+            <ComboBoxItem Content="울산광역시"/>
+            <ComboBoxItem Content="대구광역시"/>
+            <ComboBoxItem Content="부산광역시"/>
+            <ComboBoxItem Content="광주광역시"/>
+            <ComboBoxItem Content="대전광역시"/>
+
+        </ComboBox>
+        <Label Grid.Row="1" Content="세부지역" HorizontalAlignment="Left" Margin="208,60,0,0" VerticalAlignment="Top" Height="30" Width="107"/>
+        <ComboBox Name="cityCombo" Grid.Row="1" HorizontalAlignment="Left" Margin="208,95,0,0" VerticalAlignment="Top" Width="120">
+        </ComboBox>
+        <Label Grid.Row="1" Content="종류" HorizontalAlignment="Left" Margin="381,60,0,0" VerticalAlignment="Top" Height="30" Width="107"/>
+        <ComboBox Name="typeOfBr" Grid.Row="1" HorizontalAlignment="Left" Margin="381,95,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="AR"/>
+            <ComboBoxItem Content="IPC"/>
+            <ComboBoxItem Content="PC"/>
+            <ComboBoxItem Content="PF"/>
+            <ComboBoxItem Content="PSC"/>
+            <ComboBoxItem Content="RC"/>
+            <ComboBoxItem Content="SPG"/>
+            <ComboBoxItem Content="STB"/>
+            <ComboBoxItem Content="기타"/>
+        </ComboBox>
+        <Button Content="검색" HorizontalAlignment="Left" Margin="535,180,0,0" Grid.Row="1" VerticalAlignment="Top" Width="55" Click="findBridge"/>
+        <TextBox x:Name="max" HorizontalAlignment="Left" Height="23" Margin="381,177,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="min" HorizontalAlignment="Left" Height="23" Margin="210,177,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Grid.Row="1" Content="연장(길이)" HorizontalAlignment="Left" Margin="39,177,0,0" VerticalAlignment="Top" Height="30" Width="107"/>
+        <Label Grid.Row="1" Content="최소" HorizontalAlignment="Left" Margin="210,137,0,0" VerticalAlignment="Top" Height="30" Width="107"/>
+        <Label Grid.Row="1" Content="최대" HorizontalAlignment="Left" Margin="381,137,0,0" VerticalAlignment="Top" Height="30" Width="107"/>
+    </Grid>
+</Page>

@@ -1,0 +1,36 @@
+﻿<Page x:Class="wpfProject.JeonNam"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wpfProject"
+      mc:Ignorable="d" 
+      Height="450" Width="600"
+      Title="JeonNam">
+
+    <Grid Background="AliceBlue" Margin="0,0,0,0" Height="450" VerticalAlignment="Bottom">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="600"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60.8"/>
+            <RowDefinition Height="310.4"/>
+            <RowDefinition Height="78.4"/>
+        </Grid.RowDefinitions>
+        <Button Content="지역" HorizontalAlignment="Left" Margin="20,16,0,0" VerticalAlignment="Top" Width="75" Height="19" Click="toMain"/>
+        <Button Content="종류" HorizontalAlignment="Left" Margin="262,16,0,0" VerticalAlignment="Top" Width="76" Height="19"/>
+        <Button Content="교량" HorizontalAlignment="Left" Margin="505,16,0,0" VerticalAlignment="Top" Width="75" Height="19"/>
+        <Border Background="Black" BorderBrush="Black" BorderThickness="0.1" HorizontalAlignment="Left" Height="9" Margin="0,51,0,0" VerticalAlignment="Top" Width="600"/>
+        <Border Background="Black" BorderBrush="Black" BorderThickness="0.1" HorizontalAlignment="Left" Height="9" Margin="0,2.8,0,0" VerticalAlignment="Top" Width="600" Grid.Row="2"/>
+        <Button Content="뒤로가기" HorizontalAlignment="Left" Margin="10,40.8,0,0" VerticalAlignment="Top" Width="75" Grid.Row="2" Height="20"/>
+        <Button Content="종료" HorizontalAlignment="Left" Margin="262,40.8,0,0" VerticalAlignment="Top" Width="75" Grid.Row="2" Height="19"/>
+        <Button   Content="" HorizontalAlignment="Left" Margin="117,25.2,0,0" VerticalAlignment="Top" Width="381" Height="247" RenderTransformOrigin="0.497,0.488" Grid.Row="1">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="image/전라남도.png"/>
+            </Button.OpacityMask>
+            <Button.Background>
+                <ImageBrush ImageSource="image/전라남도.png"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Page>

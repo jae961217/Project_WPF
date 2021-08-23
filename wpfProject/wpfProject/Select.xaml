@@ -1,0 +1,47 @@
+﻿<Page x:Class="wpfProject.Select"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wpfProject"
+      mc:Ignorable="d" 
+     Height="450" Width="600"
+      Title="Select">
+
+    <Grid Background="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="50" Click="toMain">
+            <Image Source="image/region.png" Height="50" Width="50" RenderTransformOrigin="0.5,0.508"></Image>
+        </Button>
+        <Button Grid.Row="0" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="265,0,0,0" VerticalAlignment="Top" Width="50" Click="toGraph">
+            <Image Source="image/graph.png" Height="50" Width="50"></Image>
+            <!--여기는 막대그래프-->
+        </Button>
+        <Button Grid.Row="0" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="535,0,0,0" VerticalAlignment="Top" Width="50" Click="toSearch">
+            <Image Source="image/dodsee.png" Height="50" Width="50"></Image>
+            <!--여기는 돋보기-->
+        </Button>
+        
+        
+        <Border Grid.Row="0" Background="Black" BorderBrush="Black" BorderThickness="0.01" HorizontalAlignment="Left" Height="9" Margin="0,51,0,0" VerticalAlignment="Top" Width="600" Grid.RowSpan="2"/>
+        <Label Grid.Row="1" HorizontalAlignment="Left" Margin="210,10,0,0" VerticalAlignment="Top" Height="150" Width="200">
+            <Image Source="image/bridge.png" Height="200" Width="200"></Image>
+        </Label>
+        <Button Grid.Row="1" Content="지역별 교량 분류" HorizontalAlignment="Left" Margin="135,180,0,0" VerticalAlignment="Top" Width="120" Height="80" Click="toMain" />
+        <Button Grid.Row="1" Content="종류별 교량 분류" HorizontalAlignment="Left" Margin="335,180,0,0" VerticalAlignment="Top" Width="120" Height="80" Click="toGraph"/>
+        <Border Grid.Row="2" Background="Black" BorderBrush="Black" BorderThickness="0.01" HorizontalAlignment="Left" Height="9" Margin="0,2.8,0,0" VerticalAlignment="Top" Width="600"/>
+        <Button Grid.Row="2" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="0,8,0,0" VerticalAlignment="Top" Width="50" Click="toHome">
+            <Image Source="image/home.png" Height="50" Width="50"></Image>
+        </Button>
+        <Button Grid.Row="2" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="265,8,0,0" VerticalAlignment="Top" Width="50" Click="progExit">
+            <Image Source="image/exit.png" Height="50" Width="50"></Image>
+        </Button>
+    </Grid>
+</Page>
+
+
+
